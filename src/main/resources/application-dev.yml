@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /admin
+    session:
+      timeout: 60
+
+spring:
+  profiles: dev
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 50MB
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      
+# logging
+logging.config: classpath:log4j2-dev.xml
+
+# api
+api:
+  ktapi: http://order-service.longtail.svc.cluster.local:8080
+  ktapiOrder: http://order-service.longtail.svc.cluster.local:8080
+  ktapiDelivery: http://delivery-service.longtail.svc.cluster.local:8080
+  ktapiDispatch: http://dispatch-service.longtail.svc.cluster.local:8080
+  ktapiCharge: http://charge-service.longtail.svc.cluster.local:8080
+  ktapiAdmin: http://admin-api-internal-service.ktds.svc.cluster.local:8090
+  ktapiAddr: http://gis-addressservice-service.gis-search.svc:8080
+  kthost: api.longtail.kt.com

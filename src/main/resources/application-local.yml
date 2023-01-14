@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /admin
+    session:
+      timeout: 60
+  tomcat:
+    max-swallow-size: -1
+    max-http-form-post-size: -1
+    
+spring:
+  profiles: local
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 50MB
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+# logging
+logging.config: classpath:log4j2-local.xml
+
+# api
+api:
+  ktapi: https://api.longtail.kt.com
+  ktapiOrder: https://apigw.longtail.kt.com
+  ktapiDelivery: https://apigw.longtail.kt.com
+  ktapiDispatch: https://apigw.longtail.kt.com
+  ktapiCharge: https://apigw.longtail.kt.com
+  ktapiAdmin: https://apigw.longtail.kt.com
+  ktapiAddr: https://epc.gis.kt.com:443
+  kthost: api.longtail.kt.com
