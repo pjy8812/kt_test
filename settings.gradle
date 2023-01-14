@@ -1,0 +1,29 @@
+/*
+pluginManagement {
+	repositories {
+        maven {
+            name "dspaceSecureRepository"
+            url "https://nexus.dspace.kt.co.kr/repository/maven-public/"
+            //credentials(PasswordCredentials)
+            credentials {
+                username "longtail"
+                password "fhdxpdlf12#\$"
+            }
+            metadataSources {
+                mavenPom()
+                ignoreGradleMetadataRedirection()
+            }
+        }
+	}
+}
+*/
+
+rootProject.name = 'admin-ui'
+/*
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+    }
+}
+*/

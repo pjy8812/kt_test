@@ -1,0 +1,57 @@
+/*상태 색상*/
+.color-status-complete{color: #6c757d !important;}
+.color-status-cancel{color: #f35d5d !important;}
+.color-status-ing{color: #14b34c !important;}
+.color-status-wait{color: #41b2d5 !important;}
+.color-status-issue{color: #e19f00 !important;}
+.color-status-disable{color: #cdcdcd !important;}
+
+/*버튼*/
+.btn-dark .btn-label-right {background-color: #222830;}
+.btn-white .btn-label-right {background-color: #fff;}
+/* .btn-custom02 {background-color: #14b34c; border-color: #14b34c;}
+.btn-custom02 .btn-label-right {background-color: #005e35;} */
+
+/* 클릭 링크*/
+a.title-link {color: #5671f0; cursor: pointer;}
+a.title-link:hover {color: #1439e5;text-decoration: none;}
+
+/* 상태 색상 */
+.color-text-normal {color: #6c757d !important;}
+.color-text-danger {color: #f35d5d !important;}
+.color-text-success {color: #11ca6d !important;}
+.color-text-primary {color: #4a81d4 !important;}
+.color-text-warning {color: #e19f00 !important;}
+
+/* 상태 경계 색상 */
+.color-border-normal {border-color: #6c757d !important;}
+.color-border-danger {border-color: #f35d5d !important;}
+.color-border-success {border-color: #11ca6d !important;}
+.color-border-primary {border-color: #4a81d4 !important;}
+.color-border-warning {border-color: #e19f00 !important;}
+
+/* 오류표시 */
+.parsley-error {border-color: #f35d5d !important;}
+
+/* 파일명 미리보기 */
+.file-dismissible { padding-right: 2.5rem;padding-bottom: 0.375rem!important;padding-top: 0.375rem!important;}
+.file-dismissible .close {position: absolute; top: 0; right: 0;padding: 0.375rem 1rem;color: inherit;}
+p.file-name{cursor: pointer;}
+a.file-name { color: #000;}
+
+/* 선택된 열 강조표시 */
+tr.select {background-color: rgb(238, 238, 238);}
+
+/* 제목 한줄로 보이도록*/
+.title-overflow{display:block; width: 300px; overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+
+/* 베활성화 버튼 커서 변경 */
+button:disabled {cursor:default;}
+
+/* 로딩 */
+.spinner-wrap {text-align: center; position: fixed;top: 0; left: 0;display: block;width: 100vw; height: 100vh; background-color: #323a46;opacity: .3;}
+.spinner-border{top: 50%; position: fixed;}
+
+/* colspan */
+.border-right-bold { border-right: 2px solid #dee2e6; }
+.border-left-bold { border-left: 2px solid #dee2e6; }

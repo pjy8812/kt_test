@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+         	<RegexFilter regex=".*==&gt;.*|.*&lt;==.*" onMatch="DENY" onMismatch="ACCEPT"/>
+            <PatternLayout pattern="%d %5p %C{1}.%M(%F:%L) %m%n" />
+        </Console>
+        <RollingFile name="file" fileName="/opt/app-root/logs/admin-ui/admin-ui.log" filePattern="/opt/app-root/logs/admin-ui/admin-ui_%d{yyyy-MM-dd}.gz">
+         	<RegexFilter regex=".*==&gt;.*|.*&lt;==.*" onMatch="DENY" onMismatch="ACCEPT"/>
+			<PatternLayout pattern="%d %5p %C{1}.%M(%F:%L)%n%m%n" />
+			<Policies>
+			    <!-- SizeBasedTriggeringPolicy size="200MB" / -->
+			    <TimeBasedTriggeringPolicy/>
+			</Policies>
+			<DefaultRolloverStrategy max="10000" fileIndex="min" />
+		</RollingFile>
+		<RollingFile name="lampfile" fileName="/opt/app-root/logs/admin-ui/admin-ui.log" filePattern="/opt/app-root/logs/admin-ui/admin-ui_%d{yyyy-MM-dd}.gz">
+         	<RegexFilter regex=".*==&gt;.*|.*&lt;==.*" onMatch="DENY" onMismatch="ACCEPT"/>
+			<!-- PatternLayout pattern="%d %5p %C{1}.%M(%F:%L)%n%m%n" / -->
+            <PatternLayout pattern="%m%n" />
+			<Policies>
+			    <!-- SizeBasedTriggeringPolicy size="200MB" / -->
+			    <TimeBasedTriggeringPolicy/>
+			</Policies>
+			<DefaultRolloverStrategy max="10000" fileIndex="min" />
+		</RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.kt.klp.adm.admin" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="kr.co.iousoft" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="java.sql" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="jdbc" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="org.springframework" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="com.ibatis" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="org.mybatis" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="org.apache.ibatis" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="org.apache" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Logger name="org.apache.tiles" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Logger>
+        <Root level="DEBUG">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Root>
+    </Loggers>
+</Configuration>
