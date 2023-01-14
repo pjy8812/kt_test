@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    session:
+      timeout: 60
+
+spring:
+  profiles: stg
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      
+# logging
+logging.config: classpath:log4j2-stg.xml
+
+# api
+api:
+  ktapi: http://dev-order-service:8080
+  ktapiOrder: http://dev-order-service:8080
+  ktapiDelivery: http://dev-delivery-service:8080
+  ktapiDispatch: http://dev-dispatch-service:8080
+  ktapiCharge: http://dev-charge-service:8080
+  ktapiAdmin: http://dev-admin-api-service:8090
+  ktapiAddr: https://dev.gis.kt.com:10001
+  kthost: api.longtail.kt.com
